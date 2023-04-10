@@ -1,5 +1,7 @@
 //1. Adding a new item to the list:
 
+function newItem() {
+
   let li = $('<li></li>');
   let inputValue = $('#input').val();
   li.append(inputValue);
@@ -22,9 +24,10 @@
   crossOutButton.append(document.createTextNode('X'));
   li.append(crossOutButton);
 
-//   crossOutButton.on("click", deleteListItem);
-//   function deleteListItem(){
-// 		li.addClass("delete")
-// 	}
+   crossOutButton.on("click", deleteListItem);
+   function deleteListItem(){
+ 		li.addClass("delete")
+ 	}
+//4. Sorting the to-do list
    $('#list').sortable();
-*/
+}
